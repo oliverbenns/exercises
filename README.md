@@ -5,6 +5,6 @@ Solutions to various problems and interview questions. All tackled for the knowl
 ## Getting started
 - `nvm install`
 
-- Develop: `npm develop [solution]`
-- Run: `npm start [solution]`
+- Develop: `npm develop [solution].js`
+- Run: `npm start [solution].js`
 - Test: `todo`
