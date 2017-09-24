@@ -1,6 +1,6 @@
 # Practice
 
-Practice exercises. Solutions to problems, testing patterns and answers to interview questions. All tackled for the knowledge gain.
+Practice exercises, solutions to problems, testing patterns and answers to interview questions.
 
 ## Getting started
 - `nvm install`
