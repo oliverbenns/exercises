@@ -1,6 +1,6 @@
 # Practice
 
-Practice exercises, solutions to problems, testing patterns and answers to interview questions.
+Practice exercises, solutions to problems, programming patterns and answers to interview questions.
 
 ## Getting started
 - `nvm install`
