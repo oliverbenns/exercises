@@ -6,6 +6,8 @@ Practice exercises, solutions to problems, programming patterns and answers to i
 - `nvm install`
 - `npm install`
 
-- Develop: `npm develop [file-name].js`
-- Run: `npm start [file-name].js`
+- Develop: `npm develop [file-location].js`
+- Run: `npm start [file-location].js`
 - Test: `todo`
+
+- E.g. `npm run develop src/binary-tree`
