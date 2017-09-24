@@ -5,6 +5,6 @@ Practice exercises. Solutions to problems, testing patterns and answers to inter
 ## Getting started
 - `nvm install`
 
-- Develop: `npm develop [solution].js`
-- Run: `npm start [solution].js`
+- Develop: `npm develop [file-name].js`
+- Run: `npm start [file-name].js`
 - Test: `todo`
