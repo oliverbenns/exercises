@@ -4,6 +4,8 @@
 // For example, 6, 8 are ugly while 14 is not ugly since it includes another prime factor 7.
 // Note that 1 is typically treated as an ugly number.
 
+// @TODO: What is this math pattern called?
+
 const isUgly = num => {
   if (num < 1) {
     return false;
