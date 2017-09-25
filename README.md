@@ -10,4 +10,4 @@ Practice exercises, solutions to problems, programming patterns and answers to i
 - Run: `npm start [file-location].js`
 - Test: `todo`
 
-- E.g. `npm run develop src/binary-tree`
+- E.g. `npm run develop src/binary-search-tree`
