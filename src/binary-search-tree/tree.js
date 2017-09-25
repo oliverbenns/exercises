@@ -53,5 +53,4 @@ module.exports = class Tree {
 
     return this.root.search(value);
   }
-
 }
