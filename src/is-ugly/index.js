@@ -13,25 +13,22 @@ const isUgly = num => {
     return true;
   }
 
-  const uglyFactors = [2, 3, 5];
-
-  for(let i = 2; i < num; i++) {
-    if (num % i !== 0) {
-      break;
-    }
-
-    if (!uglyFactors.find(uF => uF === i) || !uglyFactors.find(uF => uF === num / i)) {
-      return false;
-    }
+  if (num % 2 === 0) {
+    return isUgly(num / 2);
   }
 
-  return true;
+  if (num % 3 === 0) {
+    return isUgly(num / 3);
+  }
+
+  if (num % 5 === 0) {
+    return isUgly(num / 5);
+  }
+
+  return false;
 };
 
-// const foo = isUgly(6); // true
-const bar = isUgly(8); // true
-// const baz = isUgly(14); // false
-
-// console.log('foo', foo);
-console.log('bar', bar);
-// console.log('baz', baz);
+isUgly(6); // true
+isUgly(8); // true
+isUgly(14); // false
+isUgly(17); // false
