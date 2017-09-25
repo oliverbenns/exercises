@@ -13,4 +13,12 @@ module.exports = class Tree {
       this.root.add(value);
     }
   }
+
+  search(value) {
+    if (this.root === null) {
+      return null;
+    }
+
+    return this.root.search(value);
+  }
 }

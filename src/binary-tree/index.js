@@ -13,5 +13,5 @@ tree.add(12);
 tree.add(0);
 tree.add(-1);
 
-console.dir(tree, { depth: null });
-
+const node = tree.search(200);
+console.log('node', node);

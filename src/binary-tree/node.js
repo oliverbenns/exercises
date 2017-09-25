@@ -26,4 +26,20 @@ module.exports = class Node {
       return;
     }
   }
+
+  search(value) {
+    if (this.value === value) {
+      return this;
+    }
+
+    if (this.left && value < this.value) {
+      return this.left.search(value);
+    }
+
+    if (this.right && value > this.value) {
+      return this.right.search(value);
+    }
+
+    return null;
+  }
 }
