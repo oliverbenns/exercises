@@ -23,26 +23,25 @@ module.exports = class Tree {
     return this.root.remove(value);
   }
 
-  // @TODO: This isn't really map()
-  map(fn) {
+  traverse(fn) {
     if (this.root === null) {
       return null;
     }
 
-    return this.root.map(fn);
+    return this.root.traverse(fn);
   }
 
   flatten() {
     const array = [];
 
-    this.map(node => array.push(node.value));
+    this.traverse(node => array.push(node.value));
 
     return array;
   }
 
   size() {
     let size = 0;
-    this.map(n => size++);
+    this.traverse(n => size++);
 
     return size;
   }

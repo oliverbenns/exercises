@@ -49,15 +49,15 @@ module.exports = class Node {
     }
   }
 
-  map(fn) {
+  traverse(fn) {
     if (this.left) {
-      this.left.map(fn);
+      this.left.traverse(fn);
     }
 
     fn(this);
 
     if (this.right) {
-      this.right.map(fn);
+      this.right.traverse(fn);
     }
   }
 
