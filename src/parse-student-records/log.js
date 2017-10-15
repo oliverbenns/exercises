@@ -18,8 +18,6 @@ const sortFns = [
 ];
 
 const log = records => {
-  // console.log('records', records);
-
   sortFns.forEach((fn, index) =>{
     console.log(`Output ${index + 1}:`)
     records
