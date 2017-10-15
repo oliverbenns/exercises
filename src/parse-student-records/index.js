@@ -14,4 +14,5 @@ const promises = files.map(f => {
 Promise
   .all(promises)
   .then(parsedFiles => [].concat(...parsedFiles)) // Flatten records to single array.
-  .then(log);
+  .then(log)
+  .catch(console.log);
