@@ -7,5 +7,4 @@ const readFile = file => {
   });
 };
 
-
 module.exports = readFile;
