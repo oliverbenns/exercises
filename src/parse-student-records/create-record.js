@@ -2,7 +2,7 @@ const cityCodes = {
   LA: 'Los Angeles',
   NYC: 'New York City',
   SF: 'San Francisco',
-}
+};
 
 const createRecord = (rowData, keys) => {
   const record = {};
@@ -18,6 +18,7 @@ const createRecord = (rowData, keys) => {
 
   // Map American city codes to full name
   const mappedName = cityCodes[record.campus];
+
   if (mappedName) {
     record.campus = mappedName;
   }
