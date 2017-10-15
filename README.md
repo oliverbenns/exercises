@@ -8,6 +8,6 @@ Practice exercises, solutions to problems, programming patterns and answers to i
 
 - Develop: `npm develop [file-location].js`
 - Run: `npm start [file-location].js`
-- Test: `todo`
+- Test: `npm test [project-location]/*.test.js`
 
 - E.g. `npm run develop src/binary-search-tree`

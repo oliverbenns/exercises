@@ -1,9 +1,11 @@
 {
   "scripts": {
     "develop": "nodemon",
-    "start": "node"
+    "start": "node",
+    "test": "ava"
   },
   "devDependencies": {
+    "ava": "^0.22.0",
     "nodemon": "^1.12.1"
   }
 }
