@@ -15,8 +15,4 @@ const isPrime = num => {
   return true;
 };
 
-isPrime(10); // false
-isPrime(12); // false
-isPrime(13); // true
-isPrime(61); // true
-isPrime(1); // false
+module.exports = isPrime;

@@ -1,13 +1,3 @@
-# Practice
+# Exercises
 
-Practice exercises, solutions to problems, programming patterns and answers to interview questions.
-
-## Getting started
-- `nvm install`
-- `npm install`
-
-- Develop: `npm develop [file-location].js`
-- Run: `npm start [file-location].js`
-- Test: `npm test [project-location]/*.test.js`
-
-- E.g. `npm run develop src/binary-search-tree`
+Solutions to problems, programming patterns and answers to interview questions.

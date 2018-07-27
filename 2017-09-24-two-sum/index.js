@@ -18,7 +18,4 @@ const twoSum = (numbers, target) => {
   return null;
 }
 
-twoSum([2, 7, 11, 15], 9); // [ 0, 1 ]
-twoSum([10, 4, 2, 8], 6);  // [ 1, 2 ]
-twoSum([2, 9, 3, 1], 10);  // [ 1, 3 ]
-twoSum([2, 1], 4);         // null
+module.exports = twoSum;

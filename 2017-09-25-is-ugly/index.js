@@ -30,7 +30,4 @@ const isUgly = num => {
   return false;
 };
 
-isUgly(6); // true
-isUgly(8); // true
-isUgly(14); // false
-isUgly(17); // false
+module.exports = isUgly;

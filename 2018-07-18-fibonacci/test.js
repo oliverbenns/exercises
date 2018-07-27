@@ -1,5 +1,5 @@
-const fibonnaci = require('.');
 const test = require('ava');
+const fibonnaci = require('.');
 
 const cases = [
   { n: 0, expected: 0 },
