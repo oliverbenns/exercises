@@ -1,3 +1,3 @@
 # Exercises
 
-Solutions to problems, programming patterns and answers to interview questions.
+Alogrithms, solutions to problems, programming patterns and answers to interview questions.
