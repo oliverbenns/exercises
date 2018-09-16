@@ -1,19 +1,19 @@
-  let mut low = 0;
-  let mut high = data.len() - 1;
 pub fn search(data: Vec<u8>, target: u8) -> Option<u8> {
+  let mut low_index = 0;
+  let mut high_index = data.len() - 1;
 
-  while low < high {
-    let mid = (low + high) / 2;
+  while low_index < high_index {
+    let mid = (low_index + high_index) / 2;
     let value = data[mid];
 
     if target == value {
       return Some(value);
     }
 
-    if target < value {
-      high = mid - 1;
+    if target > value {
+      low_index = mid + 1;
     } else {
-      low = mid + 1;
+      high_index = mid;
     }
   }
 
