@@ -1,6 +1,6 @@
-pub fn search(data: [u8; 4], target: u8) -> Option<u8> {
   let mut low = 0;
   let mut high = data.len() - 1;
+pub fn search(data: Vec<u8>, target: u8) -> Option<u8> {
 
   while low < high {
     let mid = (low + high) / 2;
