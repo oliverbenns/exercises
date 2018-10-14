@@ -3,5 +3,4 @@ name = "remove-duplicates"
 version = "0.1.0"
 
 [lib]
-
 name = "lib"
