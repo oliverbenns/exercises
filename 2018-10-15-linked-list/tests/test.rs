@@ -1,34 +1,22 @@
-use std::ptr;
+// use std::ptr;
 extern crate lib;
 
 #[test]
 fn constructs_linked_list() {
-  let z: *const lib::Node<i32> = ptr::null();
-  let a = lib::Node { value: 4, prev: z };
-  let b = lib::Node { value: 6, prev: &a };
+  let mut list = lib::LinkedList::new();
 
-  let list = lib::LinkedList {
-    head: &a,
-    tail: &b,
-  };
+  let v = 5;
 
-  println!("{:p}", &a);
-  println!("{:p}", list.head);
+  list.push(v);
 
-  // let b = lib::Node { value: 6 };
-  // let bar = lib::LinkedList { foo: 4 };
+  let a = list.last();
+
+  println!("{}", a);
+
+  // println!("{:p}", &a);
+  // println!("{:p}", list.tail);
+  // println!("{}", (*list.tail).value);
 
   // assert_eq!(list.head, a);
   // assert_eq!(list.tail, b);
 }
-
-
-// #[test]
-// fn constructs_node() {
-//   let a = lib::Node { value: 4 };
-//   let b = lib::Node { value: 6 };
-//   // let bar = lib::LinkedList { foo: 4 };
-
-//   assert_eq!(a.value, 4);
-//   assert_eq!(b.value, 6);
-// }
