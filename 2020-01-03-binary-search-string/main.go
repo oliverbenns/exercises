@@ -1,6 +1,6 @@
 package main
 
-func BinarySearch(slice []string, value string) int {
+func BinarySearchString(slice []string, value string) int {
 	low := 0
 	high := len(slice) - 1
 
