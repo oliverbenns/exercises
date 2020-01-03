@@ -17,8 +17,8 @@ func equals(a []int, b []int) bool {
 }
 
 func TestQuickSort(t *testing.T) {
-	result := QuickSort([]int{32, 8, 16, 48})
-	expected := []int{8, 16, 32, 48}
+	result := QuickSort([]int{32, 8, 128, 16, 64, 48})
+	expected := []int{8, 16, 32, 48, 64, 128}
 
 	if !equals(expected, result) {
 		t.Error("Does not sort correctly. Expected: ", expected, "Got: ", result)
