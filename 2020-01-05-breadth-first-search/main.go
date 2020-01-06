@@ -31,10 +31,12 @@ type Graph = map[string]User
 
 func FindClosestProfessionInNetwork(graph Graph, profession string) *User {
 	queue := Queue{}
+	searched := map[string]struct{}{}
 	queue.Add("Me")
 
 	for queue.Len() > 0 {
 		name := queue.Shift()
+		searched[name] = struct{}{}
 		user := graph[name]
 
 		if user.profession == profession {
@@ -42,7 +44,10 @@ func FindClosestProfessionInNetwork(graph Graph, profession string) *User {
 		}
 
 		for _, friend := range user.friends {
-			queue.Add(friend)
+			_, found := searched[friend]
+			if !found {
+				queue.Add(friend)
+			}
 		}
 	}
 

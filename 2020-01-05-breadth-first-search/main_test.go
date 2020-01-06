@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestQueueAdd(t *testing.T) {
 	queue := Queue{}
@@ -84,4 +87,33 @@ func TestFindClosestProfessionInNetworkNotFound(t *testing.T) {
 	if user != nil {
 		t.Error("User should not be found. But found user ", user)
 	}
+}
+
+func TestFindClosestProfessionInNetworkNoInfinite(t *testing.T) {
+	graph := Graph{
+		"Me": User{
+			name:       "Me",
+			friends:    []string{"Alice"},
+			profession: "Software Engineer",
+		},
+		"Alice": User{
+			name:       "Alice",
+			friends:    []string{"Me"},
+			profession: "Software Engineer",
+		},
+	}
+
+	channel := make(chan bool)
+
+	go func() {
+		FindClosestProfessionInNetwork(graph, "Marketer")
+		channel <- true
+	}()
+
+	select {
+	case <-channel:
+	case <-time.After(3 * time.Second):
+		t.Error("Function takes a long time - perhaps an infinite loop.")
+	}
+
 }
