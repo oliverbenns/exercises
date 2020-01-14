@@ -10,7 +10,7 @@ func (queue *Queue) Add(value string) {
 	queue.data = append(queue.data, value)
 }
 
-func (queue *Queue) Shift() string {
+func (queue *Queue) Pop() string {
 	value := queue.data[0]
 	queue.data = queue.data[1:]
 
@@ -35,7 +35,7 @@ func FindClosestProfessionInNetwork(graph Graph, profession string) *User {
 	queue.Add("Me")
 
 	for queue.Len() > 0 {
-		name := queue.Shift()
+		name := queue.Pop()
 		searched[name] = struct{}{}
 		user := graph[name]
 
