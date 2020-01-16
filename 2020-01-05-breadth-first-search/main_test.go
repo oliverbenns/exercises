@@ -14,11 +14,11 @@ func TestQueueAdd(t *testing.T) {
 	}
 }
 
-func TestQueuePop(t *testing.T) {
+func TestQueueShift(t *testing.T) {
 	queue := Queue{
 		data: []string{"Bulbasaur", "Charmander", "Squirtle"},
 	}
-	value := queue.Pop()
+	value := queue.Shift()
 
 	if len(queue.data) != 2 {
 		t.Error("Element not removed")
